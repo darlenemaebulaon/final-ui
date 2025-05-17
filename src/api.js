@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8080/api/posts';
+const API_BASE = 'https://final-api-623q.onrender.com/api/posts';
+
+// const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8080/api/posts';
 
 export const getPosts = () => axios.get(API_BASE);
 export const createPost = (post) => axios.post(API_BASE, post);
