@@ -36,7 +36,7 @@
               onChange={(e) => setImageUrl(e.target.value)}
             />
             <div className="form-actions">
-              <button type="submit">{initialData ? 'Update' : 'Tweet'}</button>
+              <button type="submit">{initialData ? 'Update' : 'Post'}</button>
               <button type="button" onClick={onClose}>Cancel</button>
             </div>
           </form>
