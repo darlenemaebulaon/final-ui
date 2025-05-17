@@ -1,7 +1,5 @@
 import { useState, useRef } from 'react';
 
-
-
 export default function PostItem({ post, onEdit, onDelete }) {
   const [likes, setLikes] = useState(0);
   const [replies, setReplies] = useState([]);
