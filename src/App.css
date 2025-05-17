@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f8fa;
   color: black;
+  
 }
 
 /* 3-column layout */
@@ -26,6 +27,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 300px;
+  margin-left: 150px;
 }
 .sidebar-left .logo {
   font-size: 2rem;
@@ -62,7 +65,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 800px;
-  min-width: 500px;
+  min-width: 650px;
+  margin-left: 150px;
 }
 .feed-header {
   font-size: 1.5rem;
@@ -72,6 +76,7 @@ body {
 }
 
 .profile-container {
+  height: 300px;
   margin-bottom: 30px;
   background: #ffffff;
   border-radius: 12px;
@@ -111,6 +116,7 @@ body {
   object-fit: cover;
 }
 .user-details {
+  margin-top: 40px;
   margin-left: 16px;
 }
 .user-details span {
@@ -134,6 +140,8 @@ body {
   border-radius: 20px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
+  background-color: white;
+  color: black;
 }
 /* Who to follow Section */
 .who-to-follow {
@@ -208,6 +216,8 @@ body {
   margin-bottom: 8px;
   border: 1px solid #ccc;
   border-radius: 12px;
+  background-color: white;
+  color: black;
 }
 .post-form button {
   background: #8e44ad;
@@ -233,12 +243,15 @@ body {
   display: flex;
   gap: 10px;
   margin-top: 5px;
+  justify-content: center;
 }
 .actions button {
   background: none;
   border: none;
   color: #8e44ad;
   cursor: pointer;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .modal-overlay {
@@ -277,6 +290,8 @@ body {
   padding: 6px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background-color: white;
+  color: black;
 }
 .comment-box button {
   background: #8e44ad;
@@ -341,4 +356,13 @@ body {
   padding: 40px;
   font-size: 1.2rem;
   color: #888;
+}
+
+.clickable-item {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clickable-item:hover {
+  color: #8e44ad;
 }
