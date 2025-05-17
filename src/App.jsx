@@ -54,21 +54,22 @@ function App() {
     <div className="layout">
       {/* Left Sidebar */}
       <aside className="sidebar-left">
-        <div className="logo">🐦</div>
+        <div className="logo">🐈</div>
         <nav className="nav">
           <ul>
-            <li className="active">Home</li>
-            <li>Explore</li>
-            <li>Notifications</li>
+            <li onClick={() => console.log('Home clicked')} className="clickable-item active">Home</li>
+            <li onClick={() => console.log('Explore clicked')} className="clickable-item">Explore</li>
+            <li onClick={() => console.log('Notifications clicked')} className="clickable-item">Notifications</li>
           </ul>
         </nav>
-        <button className="tweet-button" onClick={() => setShowForm(true)}>Tweet</button>
+
+        <button className="tweet-button" onClick={() => setShowForm(true)}>Add Post</button>
 
       </aside>
 
       {/* Center Feed */}
       <main className="feed">
-        <header className="feed-header">{currentAuthor}</header>
+        <header className="feed-header">Home</header>
 
         {/* Profile Container */}
         <div className="profile-container">
@@ -79,8 +80,8 @@ function App() {
               <div className="user-details">
                 <strong>{currentAuthor}</strong>
                 <span>@darlene</span>
-                <p>Bio here</p>
-                <p>20 Follow • 20 Follower</p>
+                <p>Hello World!</p>
+                <p>20 Following • 20 Followers</p>
               </div>
             </div>
           </div>
@@ -99,7 +100,14 @@ function App() {
             />
           )}
 
-          <PostList posts={filteredPosts} onEdit={handleEdit} onDelete={handleDelete} />
+          {posts.length === 0 ? (
+            <div className="empty-posts-message">Upload your first post!</div>
+          ) : filteredPosts.length === 0 ? (
+            <div className="empty-posts-message">No post found!</div>
+          ) : (
+            <PostList posts={filteredPosts} onEdit={handleEdit} onDelete={handleDelete} />
+          )}
+
         </div>
       </main>
 
